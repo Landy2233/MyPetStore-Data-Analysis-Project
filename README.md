@@ -1,9 +1,9 @@
 # MyPetStore-Data-Analysis-Project
 
-## Overview
+### pet_analysis.py:
+This script contains functions for data loading, cleaning, analysis, and visualization related to pets. To run this script, ensure that you have the file pets.csv in the correct directory or provide the correct file path. After running the script, it will load the data, clean it, and perform various analyses and visualizations.
 
-## Scripts and Functions
-### pet_analysis.py
+## Scripts and Functions:
 
 - **load_data(file_path):** Loads the pet data from a CSV file and returns a pandas DataFrame.
 
@@ -23,6 +23,10 @@
 
 - **plot_age_distribution_by_species(df):** Plots the age distribution of pets by species.
 
-### main.py
+### main.py:
 
 This script demonstrates the usage of the functions defined in pet_analysis.py by loading data, cleaning it, and performing various analyses and visualizations.
+
+### Visualization Output:
+
+The visualizations will e saved as image files in the same directory where the script is executed.
