@@ -21,5 +21,6 @@ plot_price_vs_age(df): Plots the relationship between pet age and price.
 
 plot_age_distribution_by_species(df): Plots the age distribution of pets by species.
 
-main.py
+### main.py
+
 This script demonstrates the usage of the functions defined in pet_analysis.py by loading data, cleaning it, and performing various analyses and visualizations.
