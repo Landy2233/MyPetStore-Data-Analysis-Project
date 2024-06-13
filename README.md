@@ -2,8 +2,11 @@
 
 ## Scripts and Functions
 pet_analysis.py
+
 load_data(file_path): Loads the pet data from a CSV file and returns a pandas DataFrame.
+
 clean_data(df): Cleans the loaded data, handling missing values and converting data types.
+
 calculate_average_price(df, species): Calculates the average price of pets belonging to a specific species.
 find_pets_with_feature(df, feature): Finds pets with a specific special feature.
 get_species_statistics(df): Calculates statistics (average price and age) for each species in the dataset.
