@@ -5,7 +5,7 @@
 ## Scripts and Functions
 ### pet_analysis.py
 
--**load_data(file_path):** Loads the pet data from a CSV file and returns a pandas DataFrame.
+**load_data(file_path):** Loads the pet data from a CSV file and returns a pandas DataFrame.
 
 clean_data(df): Cleans the loaded data, handling missing values and converting data types.
 
