@@ -4,32 +4,35 @@ import seaborn as sns
 import plotly.express as px
 
 # File path 
-file_path = '/Users/landyjimenez/Desktop/Project 1/pets.csv'
+file_path = '/Users/cindyalvarado/Desktop/Proyect_1/pets.csv'
 
 # Load data 
+print("-- LOAD DATA --")
 df = pa.load_data(file_path)
 print(df)
 
-# Clean data
-print("- Executing clean_data")
+# Check missing values 
+print("-- CHECK FOR MISSING VALUES --")
+missing_values = df.isnull().sum()
+print(missing_values)
+
+# Clean data - with respecting column name and with clean data 
+print("-- EXECUTING CLEAN DATA --")
 df = pa.clean_data(df)
 print(df)
 
 # Print average price for a given specie
-specie = 'Rabbit'
+specie = 'Reptile'
 print(f"- Average price for {specie} Specie is: {pa.calculate_average_price(df, specie)}")
 
 # Print animal names with a given feature
-feature = 'flies'
+feature = 'walks'
 print(f"- Animal names that {feature}: {pa.find_pets_with_feature(df, feature)}")
 
 # print species statistics
-print(f"- Species Statistics: ")
+print(f"- SPECIES STATISTICS: ")
 print(pa.get_species_statistics(df))
-print(f"- Price: \n {df['Price']}")
-print(f"- Age: \n {df['Age'].tolist()}")
-print(f"- Birthdate: \n {df['Birthdate'].dt.strftime('%Y-%m-%d').tolist()}")
-print(f"- data: \n {df}")
+
 # plot price distrirbution 
 print(f"- Plotting price distribution: {pa.plot_price_distribution(df)}")
 
