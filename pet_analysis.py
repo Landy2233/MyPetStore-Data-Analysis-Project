@@ -8,32 +8,26 @@ import plotly.express as px
 # Load Data
 def load_data(file_path):
     # Read the CSV file 
-    df = pd.read_csv("pets.csv", header=None)
-    # Create column names 
+    df = pd.read_csv("pets.csv")
+    return df
+
+
+# Clean data 
+def clean_data(df):
+     # Create column names 
     column_names = ["Name", "Birthdate", "Price", "Species", "SpecialFeature", "Unnamed"]
     # Assign column names to the DataFrame
     df.columns = column_names
     # Delete the empty column
     df.drop(columns=["Unnamed"], inplace=True)
-    
-    return df
-
-# Clean data 
-def clean_data(df):
-    # Check for missing values 
-    missing_values = df.isna().any()
-    
-    if missing_values.any():
-        # Fill missing values in numerical columns with mean
-        df.fillna(df.mean(), inplace=True)
-    
+    # Removing the last row
+    df = df[:-1]    
     # Convert 'Birthdate' to datetime
     df['Birthdate'] = pd.to_datetime(df['Birthdate'])
-
     # Convert 'Price' to float
     df['Price'] = df['Price'].astype(float)
-    
-    return df
+    return df # Display the cleaned DataFrame
+
 
 ## TASK 2: Decision Making and Loops
 # Calculate average price
